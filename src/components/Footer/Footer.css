@@ -1,0 +1,16 @@
+.box-icones {
+    border-bottom: 2px solid #fff;
+}
+
+.box-icones-style {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.list-group-item {
+    background-color: inherit;
+    color: #fff;
+    border: none;
+}
+
+

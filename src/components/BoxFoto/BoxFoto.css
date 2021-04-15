@@ -1,0 +1,16 @@
+.minha-foto {
+    background-image: url("../../assets/img/minha-foto.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 50vh;
+    height: 50vh;
+    opacity: 0.7;
+}
+
+@media (max-width: 576px) {
+    .minha-foto {
+        width: 20rem;
+        height: 20rem;
+    }
+}

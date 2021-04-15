@@ -1,0 +1,9 @@
+.imagem {    
+    width: 50vh;
+    height: 50vh;
+    opacity: 0.7;    
+}
+
+.border {
+    border-radius: 0rem !important;
+}
