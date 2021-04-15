@@ -8,12 +8,15 @@ import Experiencia from '../Experiencia/Experiencia';
 import Contato from '../Contato/Contato';
 
 const Home = () => {
-    let documentoTop = window.document.scrollingElement.scrollTop;
-    if (documentoTop === 0) {
-        window.scroll(0, 1);
-    } else {
-        window.scroll(0, 0);
-    }
+    React.useEffect(() => {
+        let documentoTop = window.document.scrollingElement.scrollTop;
+        if (documentoTop === 0) {
+            window.scroll(0, 2);
+        } else {
+            window.scroll(0, 3);
+        }
+    }, [])
+
 
     return (
         <>
