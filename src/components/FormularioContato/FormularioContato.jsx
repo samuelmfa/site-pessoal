@@ -1,7 +1,10 @@
 import React from 'react';
 import InputMask from "react-input-mask";
+import { ContextPaginas } from '../../PaginasContext';
 
 const FormularioContato = () => {
+   
+    const { CONT_CONTATO } = React.useContext(ContextPaginas);
 
     const [nome, setNome] = React.useState('');
     const [email, setEmail] = React.useState('');
@@ -24,7 +27,7 @@ const FormularioContato = () => {
     return (
         <div className="my-3">
             <div>
-                <h5 className="titulo">Preencha o formulário para entrar em contato...</h5>
+                <h5 className="titulo">{CONT_CONTATO.tituloForm}</h5>
             </div>
             <form id="formContato" onSubmit={handleSubmit}>
                 <div className="mb-3">
@@ -44,7 +47,7 @@ const FormularioContato = () => {
                         onChange={({ target }) => { setMensagem(target.value) }} required />
                 </div>
                 <div className="mb-3">
-                    <button type="submit" className="btn btn-primary">Enviar</button>
+                    <button type="submit" className="btn btn-primary">{CONT_CONTATO.formulario.btnLabel}</button>
                 </div>
             </form>
 

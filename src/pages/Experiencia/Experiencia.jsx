@@ -4,15 +4,10 @@ import experiancia from '../../contents/experiencia';
 import CardConteudo from '../../components/CardConteudo';
 
 const Experiencia = () => {
-    let documentoTop = window.document.scrollingElement.scrollTop;
-    if (documentoTop === 0) {
-        window.scroll(0, 1);
-    } else {
-        window.scroll(0, 0);
-    }
+    
     return (
         <>
-            <div className="row anime">
+            <div className="row">
                 <div className="col-sm-12 py-3  ">
                 </div>
                 {

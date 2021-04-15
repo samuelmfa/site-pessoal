@@ -4,15 +4,10 @@ import cursos from '../../contents/cursos';
 import CardCursos from '../../components/CardCursos';
 
 const Cursos = () => {
-    let documentoTop = window.document.scrollingElement.scrollTop;
-    if (documentoTop === 0) {
-        window.scroll(0, 1);
-    } else {
-        window.scroll(0, 0);
-    }
+    
     return (
         <>
-            <div className="row anime">
+            <div className="row">
                 <div className="col-sm-12 py-3 ">
                 </div>
                 {

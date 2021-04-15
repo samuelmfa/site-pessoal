@@ -1,9 +1,15 @@
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Rotas from './Routes';
 import { debounce } from 'lodash';
+import NotFound404 from './pages/404';
+import Home from './pages/Home';
+import Formacao from './pages/Formacao';
+import Cursos from './pages/Cursos';
+import Experiencia from './pages/Experiencia';
+import Contato from './pages/Contato';
+import { PaginaContent } from './PaginasContext';
 
 function App() {
 
@@ -31,22 +37,39 @@ function App() {
     }, 200));
 
   })()
-  
+
   return (
-    <div className="App" id="topo">
-      <Router>
-        <Header />
-        <section className="container conteudo">
-          <Switch >
-            <Rotas />
-            <Route path="*" >
-              <h1>404 Pagina não encontrada</h1>
-            </Route>
-          </Switch>
-        </section>
-      </Router>
-      <Footer />
-    </div>
+    <PaginaContent>
+      <div className="App" id="topo">
+        <Router>
+          <Header />
+          <section className="container conteudo">
+            <Switch >
+              <Route exact path="/" >
+                <Home />
+              </Route>
+              <Route exact path="/formacao" >
+                <Formacao />
+              </Route>
+              <Route exact path="/cursos" >
+                <Cursos />
+              </Route>
+              <Route exact path="/experiencia" >
+                <Experiencia />
+              </Route>
+              <Route exact path="/contato" >
+                <Contato />
+              </Route>
+              <Route path="*" >
+                <NotFound404 />
+              </Route>
+            </Switch>
+          </section>
+        </Router>
+        <Footer />
+      </div>
+    </PaginaContent>
+
   );
 }
 

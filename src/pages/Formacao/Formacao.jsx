@@ -4,14 +4,9 @@ import formacao from '../../contents/formacao';
 import CardConteudo from '../../components/CardConteudo';
 
 const Formacao = () => {
-    let documentoTop = window.document.scrollingElement.scrollTop;
-    if (documentoTop === 0) {
-        window.scroll(0, 1);
-    } else {
-        window.scroll(0, 0);
-    }
+      
     return (
-        <article id="formacao" className="row mt-5 anime">
+        <article id="formacao" className="row mt-5">
             {formacao.map((elemento) => {
                 return (
                     <section className="col-sm-12 col-lg-6 " key={elemento.id}>

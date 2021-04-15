@@ -1,7 +1,11 @@
 import React from 'react';
 import './Footer.css';
+import { ContextPaginas } from '../../PaginasContext';
 
 const Footer = () => {
+
+    const { CONT_FOOTER, CONT_HEADER } = React.useContext(ContextPaginas);
+
     return (
         <article className="bg-dark mt-2">
             <section className="container text-white">
@@ -21,10 +25,7 @@ const Footer = () => {
                         <h5>Pensamentos...</h5>
                         <p className="paragrafo">
                             <em>
-                                "Acredito em crescimento e aprendizado contínuo nessa profissão.<br />
-                                Na área de desenvolvimento de software sempre surgem muitos desafios
-                                devido as rápidas mudanças, o mundo da tecnologia  é impulsionado
-                               pelas necessidades do mercado e dos clientes."
+                                {CONT_FOOTER.pensamentos}
                             </em>
                         </p>
 
@@ -33,11 +34,11 @@ const Footer = () => {
                         <div>
                             <h5>Mapa do Site</h5>
                             <ul className="list-group list-group-flush">
-                                <li className="list-group-item paragrafo"><a className="links" href="/">Home</a></li>
-                                <li className="list-group-item paragrafo"><a className="links" href="/formacao">Formação</a></li>
-                                <li className="list-group-item paragrafo"><a className="links" href="/cursos">Cursos</a></li>
-                                <li className="list-group-item paragrafo"><a className="links" href="/experiencia">Experiência</a></li>
-                                <li className="list-group-item paragrafo"><a className="links" href="/contato">Contato</a></li>
+                                <li className="list-group-item paragrafo"><a className="links" href="/">{CONT_HEADER.home}</a></li>
+                                <li className="list-group-item paragrafo"><a className="links" href="/formacao">{CONT_HEADER.formacao}</a></li>
+                                <li className="list-group-item paragrafo"><a className="links" href="/cursos">{CONT_HEADER.cursos}</a></li>
+                                <li className="list-group-item paragrafo"><a className="links" href="/experiencia">{CONT_HEADER.experiencia}</a></li>
+                                <li className="list-group-item paragrafo"><a className="links" href="/contato">{CONT_HEADER.contato}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -45,15 +46,13 @@ const Footer = () => {
                         <div>
                             <h5>Sites que Recomendo</h5>
                             <ul className="list-group list-group-flush">
-                                <li className="list-group-item paragrafo">
-                                    <a className="links" href="https://www.alura.com.br/">Alura</a>
-                                </li>
-                                <li className="list-group-item paragrafo">
-                                    <a className="links" href="https://pt-br.reactjs.org/">React</a>
-                                </li>
-                                <li className="list-group-item paragrafo">
-                                    <a className="links" href="https://angular.io/">Angular</a>
-                                </li>  
+                                {CONT_FOOTER && CONT_FOOTER.links.map((elemento, index) => {
+                                    return (
+                                        <li className="list-group-item paragrafo" key={index}>
+                                            <a className="links" href={elemento.link}>{elemento.titulo}</a>
+                                        </li>
+                                    );
+                                })}
                             </ul>
                         </div>
                     </div>
