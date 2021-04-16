@@ -40,13 +40,16 @@ export const PaginaContent = ({ children }) => {
     const CONT_CONTATO = {
         tituloForm: 'Preencha o formulário para entrar em contato...',
         emailContato: 'samuelmfa@gmail.com',
+        emailLabel: ' Email:',
+        curriculoLabel: ' Currículo:',
+        downloadLabel: 'download curriculo',
         formulario: {
             btnLabel: 'Enviar'
         }
     };
 
     const CONT_FOOTER = {
-        pensamentos: `"Acredito em crescimento e aprendizado contínuo nessa profissão.<br />
+        pensamentos: `"Acredito em crescimento e aprendizado contínuo nessa profissão.
         Na área de desenvolvimento de software sempre surgem muitos desafios
         devido as rápidas mudanças, o mundo da tecnologia  é impulsionado
        pelas necessidades do mercado e dos clientes."`,

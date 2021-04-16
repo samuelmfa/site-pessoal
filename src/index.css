@@ -14,6 +14,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  text-decoration: none;
+  color: #0d6efd;
+}
+a:hover {
+  
+  color: gray;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
@@ -27,7 +36,7 @@ btn-primary {
 
 p {
   margin: 0;
-  text-indent: 3ch;  
+  text-indent: 3ch;
 }
 
 .links {
@@ -49,13 +58,13 @@ p {
   font-style: italic;
 }
 
-.anime{
+.anime {
   opacity: 0;
-  transform: translate3d(-100px, 0,0);
-  transition: .5s;
+  transform: translate3d(-100px, 0, 0);
+  transition: 0.5s;
 }
 
 .anime-start {
   opacity: 1;
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
 }

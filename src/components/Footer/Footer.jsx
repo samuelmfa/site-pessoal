@@ -12,10 +12,10 @@ const Footer = () => {
                 <div className="row">
                     <div className="col-sm-12">
                         <div className="text-end my-3 box-icones">
-                            <a href="https://www.linkedin.com/in/samuel-pereira-costa-43858978/">
+                            <a className="hvr-wobble-vertical" href="https://www.linkedin.com/in/samuel-pereira-costa-43858978/">
                                 <i className="bi bi-linkedin box-icones-style mx-3"></i>
                             </a>
-                            <a href="https://github.com/samuelmfa">
+                            <a className="hvr-wobble-vertical" href="https://github.com/samuelmfa">
                                 <i className="bi bi-github box-icones-style mx-3"></i>
                             </a>
                         </div>
@@ -49,7 +49,7 @@ const Footer = () => {
                                 {CONT_FOOTER && CONT_FOOTER.links.map((elemento, index) => {
                                     return (
                                         <li className="list-group-item paragrafo" key={index}>
-                                            <a className="links" href={elemento.link}>{elemento.titulo}</a>
+                                            <a className="links " href={elemento.link}>{elemento.titulo}</a>
                                         </li>
                                     );
                                 })}

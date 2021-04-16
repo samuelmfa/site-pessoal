@@ -25,7 +25,7 @@ const FormularioContato = () => {
     }
 
     return (
-        <div className="my-3">
+        <div className="my-2">
             <div>
                 <h5 className="titulo">{CONT_CONTATO.tituloForm}</h5>
             </div>
